@@ -1,0 +1,12 @@
+%p Hola!
+%p 
+  Parece que tu envío
+  %strong= @shipment.tracking_code
+  llegó a Chile.
+
+%p 
+  No podemos estar 100% seguros, así que revisa en 
+  %a{:href => "http://courier.correos.cl/seguimientoweb/detalle_envio.aspx?envio=#{@shipment.tracking_code}"} correos.cl
+  si es que realmente llegó.
+
+%p Importante: no recibirás más notificaciones de este envío.

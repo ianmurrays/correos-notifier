@@ -1,6 +1,6 @@
 .row
   .span8.offset2
-    %h2.center Notificador de envíos
+    %h2.center= link_to "Notificador de envíos", root_path
     %p Escribe el código de seguimiento y tu email. Te notificaremos cuando el envío llegue a Chile.
 
     - if @shipment.errors.any?
