@@ -1,5 +1,5 @@
 class Shipment < ActiveRecord::Base
-  validates :tracking_code, :email, :token, :presence => true
+  validates :tracking_code, :email, :presence => true
   validates :valid_email, :inclusion => { :in => [true, false] }
 
   before_save :generate_token

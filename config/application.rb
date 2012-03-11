@@ -55,5 +55,10 @@ module Correos
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # @link http://www.rabbitcreative.com/2010/09/20/rails-3-still-fucking-up-field_with_errors/
+    ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|
+      html_tag
+    end
   end
 end
