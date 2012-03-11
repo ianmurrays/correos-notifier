@@ -1,5 +1,10 @@
 Correos::Application.routes.draw do
-  resources :shipments
+  resources :shipments do
+    member do
+      get 'confirm/:token' => 'shipments#confirm', :as => :confirm
+    end  
+  end
+
   root :to => "shipments#index"
 
   # The priority is based upon order of creation:

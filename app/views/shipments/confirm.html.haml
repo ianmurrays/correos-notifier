@@ -1,0 +1,10 @@
+.row
+  .span8.offset2
+    %h2.center Notificador de envíos
+    %p 
+      - if @valid_email
+        %span.label.label-success Listo
+        Te avisaremos cuando tu envío llegue a Chile!
+      - else
+        %span.label.label-important Error
+        Esa URL no es válida.

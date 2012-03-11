@@ -1,0 +1,8 @@
+%p Hola!
+
+%p 
+  Confirma que pediste que te enviaramos notificaciones de tu pedido
+  = "#{@shipment.tracking_code}."
+
+%p
+  = link_to "Haz click acá para confirmar.", confirm_shipment_url(@shipment, :token => @shipment.token)
