@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  shipment_code: MyString
+  email: MyString
+  valid: false
+  token: MyString
+
+two:
+  shipment_code: MyString
+  email: MyString
+  valid: false
+  token: MyString
