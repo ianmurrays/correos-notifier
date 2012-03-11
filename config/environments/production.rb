@@ -67,7 +67,7 @@ Correos::Application.configure do
 
   # Email config
   config.action_mailer.default_url_options = {
-    :host => "correos.linkworks.cl"
+    :host => "correos.herokuapp.com"
   }
 
   ActionMailer::Base.smtp_settings = {
