@@ -1,7 +1,9 @@
 .row
   .span8.offset2
-    %h2.center= link_to "Notificador de envíos", root_path
-    %p Escribe el código de seguimiento y tu email. Te notificaremos cuando el envío llegue a Chile.
+    / %p
+    /   El servicio es completamente gratis, y créenos, nos carga el spam igual que a tí, 
+    /   por lo que no compartiremos tu email con
+    /   %strong nadie :)
 
     - if @shipment.errors.any?
       .alert.alert-error
@@ -10,24 +12,22 @@
         - @shipment.errors.full_messages.each do |m|
           %li= m
           
-    = form_for @shipment, :html => { :class => "form-horizontal" } do |f|
+= form_for @shipment, :html => { :class => "form-horizontal" } do |f|
+  .row
+    .span6.offset2
       %fieldset
         .control-group
-          = f.label :tracking_code, "Código"
-          .controls= f.text_field :tracking_code, :rows => 5, :cols => nil, :class => "span6"
+          = f.label :tracking_code, "Código", :class => "control-label"
+          .controls= f.text_field :tracking_code
 
         .control-group
-          = f.label :email
+          = f.label :email, :class => "control-label"
           .controls
-            = f.email_field :email, :class => "span6"
+            = f.email_field :email
             %p.help-block
               Te enviaremos un email para que confirmes tu dirección.
-
-        .form-actions
-          %button.btn.btn-primary{:type => :submit} Enviar
-
-.row
-  .span12
-    %p.center 
-      By 
-      %a{:href => "http://twitter.com/synt4x", :target => "_blank"} @synt4x
+    .span2
+      .center.submit-button
+        %button.btn.btn-primary.btn-large{:type => :submit} 
+          %i.icon-ok
+          Enviar

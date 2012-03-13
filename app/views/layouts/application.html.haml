@@ -3,8 +3,38 @@
   %head
     %title Notificador de envíos Correos de Chile
     = stylesheet_link_tag    "application", :media => "all" 
+    = stylesheet_link_tag    "http://fonts.googleapis.com/css?family=Prosto+One"
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
     .container
+      .row
+        .span8.offset2
+          %h1.title.center
+            %i.icon-envelope
+            = link_to "Notificador de Envíos", root_path
+
+      .row.span12 &nbsp;
+
+      .row
+        .span8.offset2
+          .well
+            %h3 ¿Qué es esto?
+            %p 
+              Si has pedido cosas por eBay, Dealextreme o similares, seguramente has 
+              recibido un código de seguimiento (algo como
+              %code RT1234567890CN
+              o similar).
+            %p
+              Puedes ver el estado del pedido usando este código en
+              = link_to "correos.cl,", "http://newpage.correos.cl", :target => "_blank"
+              pero si usas este sistema, 
+              %strong nosotros te avisamos por correo cuando llegue a Chile!
       = yield
+
+    %footer.center
+      By
+      = link_to "@synt4x", "http://twitter.com/synt4x", :target => "_blank"
+      \|
+      Fork on 
+      = link_to "GitHub", "https://github.com/ianmurrays/correos-notifier", :target => "_blank"

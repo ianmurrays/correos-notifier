@@ -1,10 +1,7 @@
 .row
   .span8.offset2
-    %h2.center= link_to "Notificador de envíos", root_path
-    %p 
+    %h2 
       - if @valid_email
-        %span.label.label-success Listo
         Te avisaremos cuando tu envío llegue a Chile!
       - else
-        %span.label.label-important Error
         Esa URL no es válida.
