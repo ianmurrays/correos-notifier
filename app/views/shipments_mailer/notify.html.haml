@@ -1,7 +1,9 @@
 %p Hola!
 %p 
   Parece que tu envío
-  %strong= @shipment.tracking_code
+  %strong
+    = @shipment.description
+    = " (#{@shipment.tracking_code})"
   llegó a Chile.
 
 %p 

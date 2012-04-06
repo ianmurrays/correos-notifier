@@ -4,7 +4,7 @@ class ShipmentsController < ApplicationController
   end
 
   def create
-    @shipment = Shipment.new params[:shipment].slice(:tracking_code, :email)
+    @shipment = Shipment.new params[:shipment].slice(:tracking_code, :email, :description)
 
     respond_to do |f|
       if @shipment.save
