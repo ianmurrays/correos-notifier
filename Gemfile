@@ -26,6 +26,7 @@ gem 'nokogiri'
 gem 'heroku'
 gem 'haml'
 gem 'rails-i18n'
+gem 'whenever'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
