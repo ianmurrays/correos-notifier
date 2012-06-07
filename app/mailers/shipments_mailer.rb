@@ -12,7 +12,7 @@ class ShipmentsMailer < ActionMailer::Base
   def notify(shipment_id)
     @shipment = Shipment.find shipment_id
 
-    mail :subject => "Parece que tu envío #{@shipment.tracking_code} llegó a Chile!",
+    mail :subject => "Parece que tu envío #{@shipment.description} (#{@shipment.tracking_code}) llegó a Chile!",
          :to => @shipment.email
   end
 end
