@@ -1,6 +1,6 @@
 #encoding: utf-8
 class ShipmentsMailer < ActionMailer::Base
-  default from: "notificaciones@correos.herokuapp.com"
+  default from: "no-responder@correos.linkworks.cl"
 
   def validate_email(shipment_id, email)
     @shipment = Shipment.find shipment_id
